@@ -65,9 +65,9 @@ const StudentActions: React.FC = () => {
 
   const handleSaveFeedback = async () => {
     try {
-      await axios.post(
+      const response = await axios.post(
         `http://localhost:8080/students/rate/${eventId}/`,
-        feedback,
+        feedback , 
         {
           headers: {
             Authorization: `Basic ${btoa(`user:${securityKey}`)}`,

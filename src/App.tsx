@@ -5,7 +5,7 @@ import EditEventForm from './UpdateEvent';
 import StudentActions from './StudentActions';
 import StudentLogin from './StudentLogin'
 import EventActions from './EventActions'
-export const securityKey = "bfbab94c-95e8-4b17-9ef8-1c726fc8bebc";
+export const securityKey = "b93aa3fa-6bfa-45f3-96f5-52f25ffb12f0";
 
 
 const initialEvent = {
