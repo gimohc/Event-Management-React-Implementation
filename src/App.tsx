@@ -1,11 +1,11 @@
 // App.tsx
 import React from 'react';
-import LoginForm from './LoginForm';
+import LoginForm from './UserLogin';
 import EditEventForm from './UpdateEvent';
 import StudentActions from './StudentActions';
 import StudentLogin from './StudentLogin'
-
-export const securityKey = "3286bdad-5d21-4743-9efc-800fca9162ff";
+import EventActions from './EventActions'
+export const securityKey = "bfbab94c-95e8-4b17-9ef8-1c726fc8bebc";
 
 
 const initialEvent = {
@@ -27,7 +27,8 @@ const App: React.FC = () => {
       <LoginForm />
       <EditEventForm eventId={1} initialEvent={initialEvent} /> {/* Replace 1 with the actual event ID */}
       <StudentLogin/>
-      <StudentActions></StudentActions>
+      <StudentActions/>
+      <EventActions/> 
     </div>
   );
 };
