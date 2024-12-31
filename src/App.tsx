@@ -5,7 +5,8 @@ import EditEventForm from './UpdateEvent';
 import StudentActions from './StudentActions';
 import StudentLogin from './StudentLogin'
 import EventActions from './EventActions'
-export const securityKey = "b93aa3fa-6bfa-45f3-96f5-52f25ffb12f0";
+import EventList from './EventList';
+export const securityKey = "be4b22d2-8181-4441-b439-849eefe6f52d";
 
 
 const initialEvent = {
@@ -29,6 +30,7 @@ const App: React.FC = () => {
       <StudentLogin/>
       <StudentActions/>
       <EventActions/> 
+      <EventList/>
     </div>
   );
 };
