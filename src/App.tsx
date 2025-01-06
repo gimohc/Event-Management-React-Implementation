@@ -6,10 +6,11 @@ import StudentActions from './StudentActions';
 import StudentLogin from './StudentLogin'
 import EventActions from './EventActions'
 import EventList from './EventList';
-export const securityKey = "be4b22d2-8181-4441-b439-849eefe6f52d";
+export const securityKey = "2d0dec62-425c-43ce-9628-e2ac379210f9";
 
 
 const initialEvent = {
+  id: 1,
   location: "Sample Location",
   services: "Service1,Service2",
   phoneNumber: "1234567890",
@@ -26,7 +27,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <LoginForm />
-      <EditEventForm eventId={1} initialEvent={initialEvent} /> {/* Replace 1 with the actual event ID */}
+      <EditEventForm eventId={1} initialEvent={initialEvent} /> 
       <StudentLogin/>
       <StudentActions/>
       <EventActions/> 

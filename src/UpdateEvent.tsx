@@ -4,6 +4,7 @@ import axios from 'axios';
 import { securityKey } from './App';
 
 interface Event {
+  id: number;
   location: string;
   services: string;
   phoneNumber: string;
@@ -21,7 +22,7 @@ interface EditEventFormProps {
   initialEvent: Event;
 }
 
-const EditEventForm: React.FC<EditEventFormProps> = ({ eventId, initialEvent }) => {
+const EditEventForm: React.FC<EditEventFormProps> = ({ initialEvent }) => {
   const [event, setEvent] = useState<Event>(initialEvent);
   const [message, setMessage] = useState<string>('');
 
@@ -46,7 +47,7 @@ const EditEventForm: React.FC<EditEventFormProps> = ({ eventId, initialEvent }) 
 
     try {
       const response = await axios.put(
-        `http://localhost:8080/events/${eventId}`,
+        `http://localhost:8080/events/${event.id}`,
         formattedEvent,
         {
           headers: {
@@ -68,6 +69,16 @@ const EditEventForm: React.FC<EditEventFormProps> = ({ eventId, initialEvent }) 
       <h2>Edit Event</h2>
       <form onSubmit={handleFormSubmit}>
         <div>
+        <label>ID:</label>
+          <input
+            type="id"
+            name="id"
+            value={event.id}
+            onChange={handleInputChange}
+            placeholder="id"
+          />
+          </div>
+          <div>
           <label>Location:</label>
           <input
             type="text"
