@@ -6,7 +6,7 @@ import StudentActions from './StudentActions';
 import StudentLogin from './StudentLogin'
 import EventActions from './EventActions'
 import EventList from './EventList';
-export const securityKey = "2d0dec62-425c-43ce-9628-e2ac379210f9";
+export const securityKey = "2d0dec62-425c-43ce-9628-e2ac379210f9"; // changes on every api refresh
 
 
 const initialEvent = {
